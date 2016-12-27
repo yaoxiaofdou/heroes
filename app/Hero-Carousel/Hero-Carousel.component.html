@@ -1,0 +1,20 @@
+<div class=" HC-Section ">
+    
+    <div class=" HC-Carousel ">
+        <ul [style.left] = " carouselleft ">
+            <li *ngFor="let Cimg of CarouselImgArray">
+                <img [src]=" Cimg.src " alt=" Cimg.name " />
+            </li>
+        </ul>
+    </div>
+    
+    <div class=" HC-Carousel-min ">
+        <ul>
+            <div class="HC-Carousel-min-floatdiv" [style.left] = " MinFloatdiv "></div>
+            <li *ngFor="let Cimg of CarouselImgArray;let i = index;" (click)="moveImgFun(Cimg,i)">
+                <img [src]=" Cimg.src " alt=" Cimg.name " />
+            </li>            
+        </ul>       
+    </div>
+
+</div>

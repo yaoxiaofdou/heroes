@@ -1,0 +1,42 @@
+<h2>My Heroes</h2>
+
+<!-- select -->
+<div>
+    <select class="form-control" id="power" required name="power">
+        <option *ngFor="let p of NameArray" [value]="p.name" (click)=" myselect = p.name">
+            {{p.name}}
+        </option>
+    </select>
+    <p> {{ myselect }} </p>
+</div>
+<!-- 添加英雄 -->
+<div>
+  <label>Hero name:</label> 
+  <input #heroName />
+  <button (click)="add(heroName.value); heroName.value='' ">
+    Add
+  </button>
+</div>
+
+<ul class="heroes">
+    <li ref-NArrli *ngFor="let hero of NameArray" (click)="clickme(hero);hero.isClick =! hero.isClick;"
+                   [class.selected]="hero === selectedHero" >
+        <span class="badge">{{ hero.id }}</span>
+        {{ hero.name }}
+        <span *ngIf="hero.isClick">
+            <button class="delete" (click)="delete(hero); $event.stopPropagation()">
+            x
+            </button>
+        </span>    
+    </li>
+</ul>
+
+<div *ngIf="nullHero">The null hero's name is {{ nullHero }}</div>
+
+<!-- 添加 Mini 版英雄详情 -->
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

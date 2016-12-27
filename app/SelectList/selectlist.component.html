@@ -1,0 +1,20 @@
+<h1>selectlist</h1>
+
+<div>
+    <ul>
+        <li *ngFor="let li of heroes" value="{{ index }}" >
+            <div *ngIf="li.isShow"> 
+                <p (click) = " li.isShow = false;">
+                    {{ li.name }}
+                </p>
+            </div>
+            <div *ngIf="!li.isShow">
+                <input [(ngModel)]=" li.name ">
+                <button (click)=" lisaveFun(li);" > 
+                    save
+                </button>
+            </div>
+            
+        </li>
+    </ul>
+</div>
