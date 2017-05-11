@@ -26,7 +26,7 @@ import { DashboardComponent }   from './component/dashboard.component';
 import { SelectListComponent }  from './SelectList/selectlist.component';
 import { HeroCarouselComponent } from './Hero-Carousel/Hero-Carousel.component';
 import { HCSlideComponent }     from './Hero-Carousel/HC-slide/HC-slide';
-
+import { HeroNavComponent }     from './hero-nav/hero-nav.component';
 
 
 @NgModule({
@@ -45,7 +45,8 @@ import { HCSlideComponent }     from './Hero-Carousel/HC-slide/HC-slide';
     DashboardComponent,
     SelectListComponent,
     HeroCarouselComponent,
-    HCSlideComponent
+    HCSlideComponent,
+    HeroNavComponent
   ],
   // 注册一个 HeroService 提供商 ，来告诉 注入器 如何创建 HeroService 
   providers: [ HeroService,DataService ],

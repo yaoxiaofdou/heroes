@@ -28,6 +28,7 @@ var dashboard_component_1 = require('./component/dashboard.component');
 var selectlist_component_1 = require('./SelectList/selectlist.component');
 var Hero_Carousel_component_1 = require('./Hero-Carousel/Hero-Carousel.component');
 var HC_slide_1 = require('./Hero-Carousel/HC-slide/HC-slide');
+var hero_nav_component_1 = require('./hero-nav/hero-nav.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -48,7 +49,8 @@ var AppModule = (function () {
                 dashboard_component_1.DashboardComponent,
                 selectlist_component_1.SelectListComponent,
                 Hero_Carousel_component_1.HeroCarouselComponent,
-                HC_slide_1.HCSlideComponent
+                HC_slide_1.HCSlideComponent,
+                hero_nav_component_1.HeroNavComponent
             ],
             // 注册一个 HeroService 提供商 ，来告诉 注入器 如何创建 HeroService 
             providers: [hero_service_1.HeroService, data_service_1.DataService],
